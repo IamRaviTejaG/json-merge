@@ -2,12 +2,15 @@
 """Setup script for json-merge."""
 
 from setuptools import setup, find_packages
-try: # for pip >= 10
+
+
+try:  # for pip >= 10
     from pip._internal.req import parse_requirements
     from pip._internal.download import PipSession
-except ImportError: # for pip <= 9.0.3
+except ImportError:  # for pip <= 9.0.3
     from pip.req import parse_requirements
     from pip.download import PipSession
+
 
 install_requires = parse_requirements('requirements.txt', session=PipSession())
 dependencies = [str(package.req) for package in install_requires]

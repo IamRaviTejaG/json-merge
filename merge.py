@@ -64,7 +64,6 @@ def prepareOutput(opfileprefix: str, maxFileSize: int, jsonData: dict) -> None:
     allEntries = list(jsonData.values())[0]
     # Fetches the keyname from the input files
     keyName = list(jsonData.keys())[0]
-    # Total number of entries in the merged JSON
 
     # Carries data entries for each file while writing
     currArray = []
